@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
@@ -20,5 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             alert('Por favor selecciona un archivo PDF.');
         }
+    });
+
+    // Manejo de reseñas
+    const reviewForm = document.getElementById('review-form');
+    const reviewsContainer = document.getElementById('reviews-container');
+    
+    reviewForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.getElementById('nameInput').value;
+        const review = document.getElementById('reviewInput').value;
+
+        const reviewElement = document.createElement('div');
+        reviewElement.classList.add('review');
+        reviewElement.innerHTML = `<strong>${name}</strong><p>${review}</p>`;
+        
+        reviewsContainer.appendChild(reviewElement);
+
+        // Limpiar el formulario
+        document.getElementById('nameInput').value = '';
+        document.getElementById('reviewInput').value = '';
     });
 });
