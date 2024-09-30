@@ -1,0 +1,174 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo general */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Contenedor del slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 9s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Texto dentro del carrusel */
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Contenedor de cuadrícula para las tarjetas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card_image {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_body {
+    text-align: center;
+}
+
+.card_body h2 {
+    color: #333;
+}
+
+.card_body p {
+    color: #555;
+}
+
+.card_footer .btn {
+    padding: 10px 20px;
+    color: #fff;
+    background: #e55d87;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.card_footer .btn:hover {
+    background: #ff5858;
+}
+
+/* Sección para subir archivos */
+.upload-section {
+    margin-top: 40px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h2 {
+    color: #333;
+}
+
+.upload-section .btn {
+    padding: 10px 20px;
+    color: #fff;
+    background: #e55d87;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.upload-section .btn:hover {
+    background: #ff5858;
+}

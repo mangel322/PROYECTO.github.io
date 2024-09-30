@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas para Fechas Especiales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Carrusel de imágenes superior -->
+        <div class="image-slider">
+            <div class="slide" style="background-image: url('diseño1.jpg');"></div>
+            <div class="slide" style="background-image: url('diseño2.jpg');"></div>
+            <div class="slide" style="background-image: url('diseño3.jpg');"></div>
+            <div class="slider-text">
+                <h1>Diseños</h1>
+            </div>
+        </div>
+
+        <!-- Contenedor de cuadrícula para las tarjetas -->
+        <div class="grid-container">
+            <!-- Tarjeta 1: Día de la Madre -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="dia-madre.jpg" alt="Día de la Madre">
+                </div>
+                <div class="card_body">
+                    <h2>Día de la Madre</h2>
+                    <p>Crea una tarjeta personalizada para el Día de la Madre.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=dia-madre.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Año Nuevo -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="año-nuevo.jpg" alt="Año Nuevo">
+                </div>
+                <div class="card_body">
+                    <h2>Año Nuevo</h2>
+                    <p>Diseña una tarjeta para desear un Feliz Año Nuevo.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=año-nuevo.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Navidad -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="navidad.jpg" alt="Navidad">
+                </div>
+                <div class="card_body">
+                    <h2>Navidad</h2>
+                    <p>Crea una tarjeta de felicitación navideña.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=navidad.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario para subir archivos PDF -->
+        <div class="upload-section">
+            <h2>Subir Cartas en PDF</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="fileInput" accept=".pdf">
+                <button type="submit" class="btn">Subir PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
