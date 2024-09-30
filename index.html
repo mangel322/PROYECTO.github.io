@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,9 +18,8 @@
             </div>
         </div>
 
-        <!-- Contenedor de cuadrícula para las tarjetas -->
+        <!-- Contenedor de cuadrícula para las tarjetas (9 opciones) -->
         <div class="grid-container">
-            <!-- Tarjeta 1: Día de la Madre -->
             <div class="card">
                 <div class="card_image">
                     <img src="dia-madre.jpg" alt="Día de la Madre">
@@ -35,7 +33,6 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Año Nuevo -->
             <div class="card">
                 <div class="card_image">
                     <img src="año-nuevo.jpg" alt="Año Nuevo">
@@ -49,7 +46,6 @@
                 </div>
             </div>
 
-            <!-- Tarjeta 3: Navidad -->
             <div class="card">
                 <div class="card_image">
                     <img src="navidad.jpg" alt="Navidad">
@@ -62,15 +58,112 @@
                     <a href="template-viewer.html?template=navidad.html" class="btn">Personalizar</a>
                 </div>
             </div>
+
+            <!-- Nueva tarjeta 1 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="cumpleaños.jpg" alt="Cumpleaños">
+                </div>
+                <div class="card_body">
+                    <h2>Cumpleaños</h2>
+                    <p>Envía una tarjeta especial para un cumpleaños.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=cumpleaños.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tarjeta 2 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="san-valentin.jpg" alt="San Valentín">
+                </div>
+                <div class="card_body">
+                    <h2>San Valentín</h2>
+                    <p>Crea una tarjeta especial para el Día de San Valentín.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=san-valentin.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tarjeta 3 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="halloween.jpg" alt="Halloween">
+                </div>
+                <div class="card_body">
+                    <h2>Halloween</h2>
+                    <p>Envía una tarjeta divertida para Halloween.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=halloween.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tarjeta 4 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="graduacion.jpg" alt="Graduación">
+                </div>
+                <div class="card_body">
+                    <h2>Graduación</h2>
+                    <p>Felicita a alguien por su graduación.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=graduacion.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tarjeta 5 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="aniversario.jpg" alt="Aniversario">
+                </div>
+                <div class="card_body">
+                    <h2>Aniversario</h2>
+                    <p>Envía una tarjeta para un aniversario especial.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=aniversario.html" class="btn">Personalizar</a>
+                </div>
+            </div>
+
+            <!-- Nueva tarjeta 6 -->
+            <div class="card">
+                <div class="card_image">
+                    <img src="bautizo.jpg" alt="Bautizo">
+                </div>
+                <div class="card_body">
+                    <h2>Bautizo</h2>
+                    <p>Crea una tarjeta de felicitación para un bautizo.</p>
+                </div>
+                <div class="card_footer">
+                    <a href="template-viewer.html?template=bautizo.html" class="btn">Personalizar</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Formulario para subir archivos PDF -->
+        <!-- Sección para subir archivos PDF -->
         <div class="upload-section">
             <h2>Subir Cartas en PDF</h2>
             <form id="upload-form" enctype="multipart/form-data">
                 <input type="file" id="fileInput" accept=".pdf">
                 <button type="submit" class="btn">Subir PDF</button>
             </form>
+        </div>
+
+        <!-- Sección para reseñas -->
+        <div class="reviews-section">
+            <h2>Reseñas de Usuarios</h2>
+            <form id="review-form">
+                <input type="text" id="nameInput" placeholder="Tu nombre" required>
+                <textarea id="reviewInput" placeholder="Escribe tu reseña" required></textarea>
+                <button type="submit" class="btn">Enviar Reseña</button>
+            </form>
+            <div id="reviews-container">
+                <!-- Las reseñas aparecerán aquí -->
+            </div>
         </div>
     </div>
 
